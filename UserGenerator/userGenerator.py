@@ -19,13 +19,15 @@ UPCASE_CHARACTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
 SYMBOLS = ['@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '>',
            '*', '(', ')', '<']
 
+EXPERIENCE_RANK = ['Beginner', 'Intermediate', 'Advanced', 'Professional']
+
 STATES = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'ND', 'NC', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
 EMAILSUFFIX = ["@gmail.com", "@outlook.com", "@163.com", "@hotmail.com", "@qq.com", "@acme.com"]
 # combines all the character arrays above to form one array
 COMBINED_LIST = DIGITS + UPCASE_CHARACTERS + LOCASE_CHARACTERS + SYMBOLS
 EMAILPREFIX = DIGITS + UPCASE_CHARACTERS + LOCASE_CHARACTERS
 def userGenerator():
-    num = 10
+    num = pow(10, 6)
     f = open("first-names.json")
     # m = open("middle-names.json")
     l = open("last-names.json")
@@ -37,7 +39,7 @@ def userGenerator():
     # print(type(lines))
     w = open('users.csv', 'w')
     writer = csv.writer(w)
-    writer.writerow(["uid", "firstName", "lastName", "gender", "age", "weight in kg", "height in cm", "phone", "password", "email", "address"])
+    writer.writerow(["uid", "firstName", "lastName", "gender", "age", "weight in kg", "height in cm", "phone", "password", "email", "address", "hikingLevel"])
     for i in range(num):
         uid = i
         age = random.randint(9, 80)
@@ -72,6 +74,8 @@ def userGenerator():
             email += random.choice(EMAILPREFIX)
         email += random.choice(EMAILSUFFIX)
         
+        skillLvl = random.choice(EXPERIENCE_RANK)
+
         # randomly select at least one character from each character set above
         rand_digit = random.choice(DIGITS)
         rand_upper = random.choice(UPCASE_CHARACTERS)
@@ -107,6 +111,6 @@ def userGenerator():
         # middleName = random.choice(middleNames)
         lastName = random.choice(lastNames)
         # print(uid, firstName, lastName, gender, age, weight, height, phone, password, email, address)
-        row = [uid, firstName, lastName, gender, age, weight, height, phone, password, email, address]
+        row = [uid, firstName, lastName, gender, age, weight, height, phone, password, email, address, skillLvl]
         writer.writerow(row)
 userGenerator()
