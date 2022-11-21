@@ -1,4 +1,4 @@
-
+package com.hiking.dal;
 /**
  * author Lilan Wu
  */
