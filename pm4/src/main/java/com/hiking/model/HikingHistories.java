@@ -1,6 +1,6 @@
 package com.hiking.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class HikingHistories {
 	protected int hikingHistoryId;

@@ -8,8 +8,8 @@ public class Reviews {
 	protected HikingTrails hikingTrail;
 	protected Date createdTime;
 	protected String review;
-	protected float rating;
-	public Reviews(int reviewId, Users user, HikingTrails hikingTrail, Date createdTime, String review, float rating) {
+	protected double rating;
+	public Reviews(int reviewId, Users user, HikingTrails hikingTrail, Date createdTime, String review, double rating) {
 		super();
 		this.reviewId = reviewId;
 		this.user = user;
@@ -18,7 +18,7 @@ public class Reviews {
 		this.review = review;
 		this.rating = rating;
 	}
-	public Reviews(Users user, HikingTrails hikingTrail, Date createdTime, String review, float rating) {
+	public Reviews(Users user, HikingTrails hikingTrail, Date createdTime, String review, double rating) {
 		super();
 		this.user = user;
 		this.hikingTrail = hikingTrail;
@@ -60,10 +60,10 @@ public class Reviews {
 	public void setReview(String review) {
 		this.review = review;
 	}
-	public float getRating() {
+	public double getRating() {
 		return rating;
 	}
-	public void setRating(float rating) {
+	public void setRating(double rating) {
 		this.rating = rating;
 	}
 
