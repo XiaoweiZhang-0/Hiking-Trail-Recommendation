@@ -37,7 +37,6 @@ public class UserServlet extends HttpServlet {
         usersList.add(users);
 
         httpServletRequest.setAttribute("users", usersList);
-        System.out.println(usersList);
         httpServletRequest.getRequestDispatcher("/index.jsp").forward(httpServletRequest, httpServletResponse);
     }
 
