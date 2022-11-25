@@ -13,9 +13,7 @@ public class Users {
 	protected String address;
 	protected String phoneNumber;
 	protected String email;
-	
-	
-	
+
 	public enum Gender {
 		Male, Female, NotSpecified, NonBinary
 	}
@@ -23,10 +21,6 @@ public class Users {
 	public enum HikingLevel{
 		Beginner, Intermediate, Advanced, Professional
 	}
-
-
-
-	
 	
 	public Users(String firstName, String lastName, String password, Gender gender, int age, int weight, double height,
 			HikingLevel hikingLevel, String address, String phoneNumber, String email) {
@@ -43,8 +37,6 @@ public class Users {
 		this.phoneNumber = phoneNumber;
 		this.email = email;
 	}
-
-
 
 	public Users(int userId, String firstName, String lastName, String password, Gender gender, int age, int weight,
 			double height, HikingLevel hikingLevel, String address, String phoneNumber, String email) {
@@ -63,14 +55,10 @@ public class Users {
 		this.email = email;
 	}
 
-
-
 	public Users(int userId) {
 		super();
 		this.userId = userId;
 	}
-
-
 
 	public int getUserId() {
 		return userId;
@@ -173,5 +161,22 @@ public class Users {
 	public void setHikingLevel(HikingLevel hikingLevel) {
 		this.hikingLevel = hikingLevel;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Users{" +
+				"userId=" + userId +
+				", firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", password='" + password + '\'' +
+				", gender=" + gender +
+				", age=" + age +
+				", weight=" + weight +
+				", height=" + height +
+				", hikingLevel=" + hikingLevel +
+				", address='" + address + '\'' +
+				", phoneNumber='" + phoneNumber + '\'' +
+				", email='" + email + '\'' +
+				'}';
+	}
 }

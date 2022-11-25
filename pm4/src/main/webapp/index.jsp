@@ -13,7 +13,7 @@
 
 <a href="user">test get user</a>
 
-<div>${users}</div>
+<div>${user}</div>
 
 </body>
 </html>

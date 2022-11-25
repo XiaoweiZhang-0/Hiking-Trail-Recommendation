@@ -37,13 +37,13 @@ public class ConnectionManager {
 	// User to connect to your database instance. By default, this is "root2".
 	private final String user = "root";
 	// Password for the user.
-	private final String password = "data5200";
+	private final String password = "lp13688421885";
 	// URI to your database server. If running on the same machine, then this is "localhost".
 	private final String hostName = "localhost";
 	// Port to your database server. By default, this is 3307.
 	private final int port= 3306;
 	// Name of the MySQL schema that contains your tables.
-	private final String schema = "Trail";//modify to corresponding schema
+	private final String schema = "mt2";//modify to corresponding schema
 	// Default timezone for MySQL server.
 	private final String timezone = "UTC";
 
@@ -59,7 +59,7 @@ public class ConnectionManager {
 			// Otherwise, Tomcat may have issues loading libraries in the proper order.
 			// One alternative is calling this in the HttpServlet init() override.
 			try {
-				Class.forName("com.mysql.cj.jdbc.Driver");
+				Class.forName("com.mysql.jdbc.Driver");
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 				throw new SQLException(e);
