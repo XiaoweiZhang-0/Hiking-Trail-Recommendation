@@ -8,57 +8,53 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Create a User</title>
+<title>Update a User</title>
 </head>
 <body>
-	<h1>Create User</h1>
-	<form action="usercreate" method="post">
+	<h1>Update User</h1>
+	<form action="userupdate" method="post">
 		<p>
 			<label for="userid">UserId</label>
-			<input id="userid" name="userid" value="">
+			<input id="userid" name="userid" value="${fn:escapeXml(param.userid)}">
 		</p>
 		<p>
-			<label for="firstname">FirstName</label>
+			<label for="firstname">New FirstName</label>
 			<input id="firstname" name="firstname" value="">
 		</p>
 		<p>
-			<label for="lastname">LastName</label>
+			<label for="lastname">New LastName</label>
 			<input id="lastname" name="lastname" value="">
 		</p>
 		<p>
-			<label for="password">Password</label>
-			<input id="password" name="password" value="">
-		</p>
-		<p>
-			<label for="gender">Gender</label>
+			<label for="gender">New Gender</label>
 			<input id="gender" name="gender" value="">
 		</p>
 		<p>
-			<label for="age">Age</label>
+			<label for="age">New Age</label>
 			<input id="age" name="age" value="">
 		</p>
 		<p>
-			<label for="weight">Weight</label>
+			<label for="weight">New Weight</label>
 			<input id="weight" name="weight" value="">
 		</p>
 		<p>
-			<label for="height">Height</label>
+			<label for="height">New Height</label>
 			<input id="height" name="height" value="">
 		</p>
 		<p>
-			<label for="hikingLevel">HikingLevel</label>
+			<label for="hikingLevel">New HikingLevel</label>
 			<input id="hikingLevel" name="hikingLevel" value="">
 		</p>
 		<p>
-			<label for="address">Address</label>
+			<label for="address">New Address</label>
 			<input id="address" name="address" value="">
 		</p>
 		<p>
-			<label for="phone">Phone</label>
+			<label for="phone">New Phone</label>
 			<input id="phone" name="phone" value="">
 		</p>
 		<p>
-			<label for="email">Email</label>
+			<label for="email">New Email</label>
 			<input id="email" name="email" value="">
 		</p>
 		<p>
