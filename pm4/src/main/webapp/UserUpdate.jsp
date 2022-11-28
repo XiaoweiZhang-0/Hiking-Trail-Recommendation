@@ -12,58 +12,58 @@
 </head>
 <body>
 	<h1>Update User</h1>
-	<form action="userupdate" method="post">
+	<form action="user" method="post">
 		<p>
 			<label for="userid">UserId</label>
 			<input id="userid" name="userid" value="${fn:escapeXml(param.userid)}">
 		</p>
-		<p>
-			<label for="firstname">New FirstName</label>
-			<input id="firstname" name="firstname" value="">
-		</p>
+<%--		<p>--%>
+<%--			<label for="firstname">New FirstName</label>--%>
+<%--			<input id="firstname" name="firstname" value="">--%>
+<%--		</p>--%>
 		<p>
 			<label for="lastname">New LastName</label>
 			<input id="lastname" name="lastname" value="">
 		</p>
-		<p>
-			<label for="gender">New Gender</label>
-			<input id="gender" name="gender" value="">
-		</p>
-		<p>
-			<label for="age">New Age</label>
-			<input id="age" name="age" value="">
-		</p>
-		<p>
-			<label for="weight">New Weight</label>
-			<input id="weight" name="weight" value="">
-		</p>
-		<p>
-			<label for="height">New Height</label>
-			<input id="height" name="height" value="">
-		</p>
-		<p>
-			<label for="hikingLevel">New HikingLevel</label>
-			<input id="hikingLevel" name="hikingLevel" value="">
-		</p>
-		<p>
-			<label for="address">New Address</label>
-			<input id="address" name="address" value="">
-		</p>
-		<p>
-			<label for="phone">New Phone</label>
-			<input id="phone" name="phone" value="">
-		</p>
-		<p>
-			<label for="email">New Email</label>
-			<input id="email" name="email" value="">
-		</p>
+<%--		<p>--%>
+<%--			<label for="gender">New Gender</label>--%>
+<%--			<input id="gender" name="gender" value="">--%>
+<%--		</p>--%>
+<%--		<p>--%>
+<%--			<label for="age">New Age</label>--%>
+<%--			<input id="age" name="age" value="">--%>
+<%--		</p>--%>
+<%--		<p>--%>
+<%--			<label for="weight">New Weight</label>--%>
+<%--			<input id="weight" name="weight" value="">--%>
+<%--		</p>--%>
+<%--		<p>--%>
+<%--			<label for="height">New Height</label>--%>
+<%--			<input id="height" name="height" value="">--%>
+<%--		</p>--%>
+<%--		<p>--%>
+<%--			<label for="hikingLevel">New HikingLevel</label>--%>
+<%--			<input id="hikingLevel" name="hikingLevel" value="">--%>
+<%--		</p>--%>
+<%--		<p>--%>
+<%--			<label for="address">New Address</label>--%>
+<%--			<input id="address" name="address" value="">--%>
+<%--		</p>--%>
+<%--		<p>--%>
+<%--			<label for="phone">New Phone</label>--%>
+<%--			<input id="phone" name="phone" value="">--%>
+<%--		</p>--%>
+<%--		<p>--%>
+<%--			<label for="email">New Email</label>--%>
+<%--			<input id="email" name="email" value="">--%>
+<%--		</p>--%>
 		<p>
 			<input type="submit">
 		</p>
 	</form>
 	<br/><br/>
-	<p>
-		<span id="successMessage"><b>${messages.success}</b></span>
-	</p>
+<%--	<p>--%>
+<%--		<span id="successMessage"><b>${messages.success}</b></span>--%>
+<%--	</p>--%>
 </body>
 </html>

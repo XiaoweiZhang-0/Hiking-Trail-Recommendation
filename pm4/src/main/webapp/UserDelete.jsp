@@ -11,16 +11,16 @@
 <title>Delete a User</title>
 </head>
 <body>
-	<h1>${messages.title}</h1>
+<%--	<h1>${messages.title}</h1>--%>
 	<form action="userdelete" method="post">
 		<p>
-			<div <c:if test="${messages.disableSubmit}">style="display:none"</c:if>>
-				<label for="userid">UserId</label>
-				<input id="userid" name="userid" value="${fn:escapeXml(param.userid)}">
+			<div>
+				<label for="userId">UserId</label>
+				<input id="userId" name="userId" value="${fn:escapeXml(param.userid)}">
 			</div>
 		</p>
 		<p>
-			<span id="submitButton" <c:if test="${messages.disableSubmit}">style="display:none"</c:if>>
+			<span id="submitButton" >
 			<input type="submit">
 			</span>
 		</p>

@@ -13,10 +13,10 @@
 <body>
 	<h1>Create User</h1>
 	<form action="usercreate" method="post">
-		<p>
-			<label for="userid">UserId</label>
-			<input id="userid" name="userid" value="">
-		</p>
+<%--		<p>--%>
+<%--			<label for="userid">UserId</label>--%>
+<%--			<input id="userid" name="userid" value="">--%>
+<%--		</p>--%>
 		<p>
 			<label for="firstname">FirstName</label>
 			<input id="firstname" name="firstname" value="">
@@ -66,8 +66,8 @@
 		</p>
 	</form>
 	<br/><br/>
-	<p>
-		<span id="successMessage"><b>${messages.success}</b></span>
-	</p>
+<%--	<p>--%>
+<%--		<span id="successMessage"><b>${messages.success}</b></span>--%>
+<%--	</p>--%>
 </body>
 </html>
