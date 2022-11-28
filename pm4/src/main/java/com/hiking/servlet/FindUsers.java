@@ -78,6 +78,7 @@ public class FindUsers extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)
       throws ServletException, IOException {
+    List<Users> users = new ArrayList<Users>();
     // Map for storing messages.
     String userId = httpServletRequest.getParameter("userId");
     int userIdInt = 0;
@@ -88,11 +89,12 @@ public class FindUsers extends HttpServlet {
 
     try {
       user = usersDao.getUserById(userIdInt);
+      users.add(user);
     } catch (SQLException throwables) {
       // todo
     }
 
-    httpServletRequest.setAttribute("user", user);
+    httpServletRequest.setAttribute("users", users);
     httpServletRequest.getRequestDispatcher("/FindUsers.jsp").forward(httpServletRequest, httpServletResponse);
   }
 }

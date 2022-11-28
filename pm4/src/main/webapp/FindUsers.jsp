@@ -16,7 +16,7 @@
 		<h1>Search for a User by UserId</h1>
 		<p>
 			<label for="userId">UserId</label>
-			<input id="UserId" name="UserId" value="${fn:escapeXml(param.userid)}">
+			<input id="userId" name="userId" value="${fn:escapeXml(param.userid)}">
 		</p>
 		<p>
 			<input type="submit">
@@ -50,8 +50,9 @@
                 <th>Delete User</th>
                 <th>Update User</th>
             </tr>
-            <c:forEach items="${user}" var="user" >
-<%--                <c: items="${user}" var="user"></c:>--%>
+<%--            <c:item="${user}" var="user" >--%>
+            <c:forEach items="${users}" var="user">
+<%--            <c:item var="${user}" var="user">--%>
                 <tr>
                     <td><c:out value="${user.getUserId()}" /></td>
                     <td><c:out value="${user.getFirstName()}" /></td>
