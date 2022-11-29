@@ -12,18 +12,18 @@
 </head>
 <body>
 	<h1>Update User</h1>
-	<form action="user" method="post">
+	<form action="userupdate" method="post">
 		<p>
-			<label for="userid">UserId</label>
-			<input id="userid" name="userid" value="${fn:escapeXml(param.userid)}">
+			<label for="userId">UserId</label>
+			<input id="userId" name="userId" value="${fn:escapeXml(param.userid)}">
 		</p>
 <%--		<p>--%>
 <%--			<label for="firstname">New FirstName</label>--%>
 <%--			<input id="firstname" name="firstname" value="">--%>
 <%--		</p>--%>
 		<p>
-			<label for="lastname">New LastName</label>
-			<input id="lastname" name="lastname" value="">
+			<label for="lastName">New LastName</label>
+			<input id="lastName" name="lastName" value="">
 		</p>
 <%--		<p>--%>
 <%--			<label for="gender">New Gender</label>--%>

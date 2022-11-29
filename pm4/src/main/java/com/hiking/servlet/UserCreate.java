@@ -85,7 +85,7 @@ public class UserCreate extends HttpServlet {
     } catch (SQLException throwables) {
       throwables.printStackTrace();
     }
-    httpServletRequest.getRequestDispatcher("/UserCreate.jsp").forward(httpServletRequest, httpServletResponse);
+    httpServletRequest.getRequestDispatcher("/FindUsers.jsp").forward(httpServletRequest, httpServletResponse);
 
   }
 }

@@ -25,20 +25,20 @@ public class UserUpdate extends HttpServlet {
     usersDao = UsersDao.getInstance();
   }
 
-//  @Override
-//  public void doGet(HttpServletRequest req, HttpServletResponse resp)
-//      throws ServletException, IOException {
-//    // Map for storing messages.
+  @Override
+  public void doGet(HttpServletRequest req, HttpServletResponse resp)
+      throws ServletException, IOException {
+    // Map for storing messages.
 //    Map<String, String> messages = new HashMap<String, String>();
 //    req.setAttribute("messages", messages);
 //
 //    // Retrieve user and validate.
-//    String userName = req.getParameter("username");
+    String userId = req.getParameter("userId");
 //    if (userName == null || userName.trim().isEmpty()) {
 //      messages.put("success", "Please enter a valid UserName.");
 //    } else {
 //      try {
-//        BlogUsers blogUser = blogUsersDao.getBlogUserFromUserName(userName);
+//        Users user = UsersDao.getBlogUserFromUserName(userName);
 //        if(blogUser == null) {
 //          messages.put("success", "UserName does not exist.");
 //        }
@@ -48,9 +48,9 @@ public class UserUpdate extends HttpServlet {
 //        throw new IOException(e);
 //      }
 //    }
-//
-//    req.getRequestDispatcher("/UserUpdate.jsp").forward(req, resp);
-//  }
+
+    req.getRequestDispatcher("/UserUpdate.jsp").forward(req, resp);
+  }
 
   @Override
   public void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -67,12 +67,11 @@ public class UserUpdate extends HttpServlet {
     user.setLastName(lastName);
     try {
       usersDao.updateLastName(user, lastName);
-      req.getRequestDispatcher("/UserUpdate.jsp").forward(req, resp);
     } catch (SQLException throwables) {
       throwables.printStackTrace();
     }
 
-
+    req.getRequestDispatcher("/FindUsers.jsp").forward(req, resp);
   }
 }
 

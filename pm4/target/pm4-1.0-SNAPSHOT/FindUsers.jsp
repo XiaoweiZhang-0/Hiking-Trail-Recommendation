@@ -42,15 +42,16 @@
                 <th>Address</th>
                 <th>Phone</th>
                 <th>Email</th>
-                <th>HikingHistories</th>
-                <th>Reviews</th>
-                <th>LikesReviews</th>
-                <th>ReviewComments</th>
-                <th>LikesComments</th>
+<%--                <th>HikingHistories</th>--%>
+<%--                <th>Reviews</th>--%>
+<%--                <th>LikesReviews</th>--%>
+<%--                <th>ReviewComments</th>--%>
+<%--                <th>LikesComments</th>--%>
                 <th>Delete User</th>
                 <th>Update User</th>
             </tr>
 <%--            <c:item="${user}" var="user" >--%>
+<%--            <jsp:useBean id="users" scope="request" type="java.util.List"/>--%>
             <c:forEach items="${users}" var="user">
 <%--            <c:item var="${user}" var="user">--%>
                 <tr>
@@ -64,7 +65,7 @@
                     <td><c:out value="${user.getHeight()}" /></td>
                     <td><c:out value="${user.getHikingLevel()}" /></td>
                     <td><c:out value="${user.getAddress()}" /></td>
-                    <td><c:out value="${user.getPhone()}" /></td>
+                    <td><c:out value="${user.getPhoneNumber()}" /></td>
                     <td><c:out value="${user.getEmail()}" /></td>
 <%--                    <td><a href="userreviews?userid=<c:out value="${User.getUserId()}"/>">Reviews</a></td>--%>
 <%--                    <td><a href="likesreviews?userid=<c:out value="${User.getUserId()}"/>">LikesReviews</a></td>--%>

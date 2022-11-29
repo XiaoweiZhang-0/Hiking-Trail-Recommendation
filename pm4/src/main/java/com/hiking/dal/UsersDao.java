@@ -161,8 +161,11 @@ public class UsersDao {
                 int age = results.getInt("age");
                 int weight = results.getInt("weight");
                 double height = results.getDouble("height");
-                Users.HikingLevel hikingLevel = Users.HikingLevel.valueOf(
+                Users.HikingLevel hikingLevel = null;
+                if(results.getString("hikingLevel") != null){
+                        hikingLevel = Users.HikingLevel.valueOf(
                         results.getString("hikingLevel"));
+                }
                 String address = results.getString("address");
                 String phoneNumber = results.getString("phoneNumber");
                 String email = results.getString("email");

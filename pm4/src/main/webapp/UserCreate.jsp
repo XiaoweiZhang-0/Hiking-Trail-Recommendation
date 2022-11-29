@@ -18,12 +18,12 @@
 <%--			<input id="userid" name="userid" value="">--%>
 <%--		</p>--%>
 		<p>
-			<label for="firstname">FirstName</label>
-			<input id="firstname" name="firstname" value="">
+			<label for="firstName">FirstName</label>
+			<input id="firstName" name="firstName" value="">
 		</p>
 		<p>
-			<label for="lastname">LastName</label>
-			<input id="lastname" name="lastname" value="">
+			<label for="lastName">LastName</label>
+			<input id="lastName" name="lastName" value="">
 		</p>
 		<p>
 			<label for="password">Password</label>
@@ -54,8 +54,8 @@
 			<input id="address" name="address" value="">
 		</p>
 		<p>
-			<label for="phone">Phone</label>
-			<input id="phone" name="phone" value="">
+			<label for="phoneNumber">Phone</label>
+			<input id="phoneNumber" name="phoneNumber" value="">
 		</p>
 		<p>
 			<label for="email">Email</label>
