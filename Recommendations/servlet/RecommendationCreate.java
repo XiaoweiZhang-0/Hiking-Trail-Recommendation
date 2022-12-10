@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/usercreate")
+@WebServlet("/recommendationcreate")
 public class RecommendationCreate extends HttpServlet {
 
   protected RecommendationsDao recommendationsDao;
