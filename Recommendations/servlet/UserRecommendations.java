@@ -48,8 +48,7 @@ public class UserRecommendations extends HttpServlet {
         List<Recommendations> recommendations = new ArrayList<Recommendations>();
 
         try {
-        	Users user = new Users(userIdInt);
-        	recommendations = recommendationsDao.getRecommendationsForUser(user);
+        	recommendations = recommendationsDao.getRecommendationsByUserId(userIdInt);
         } catch (SQLException e) {
 			e.printStackTrace();
 			throw new IOException(e);
