@@ -10,4 +10,5 @@
       </list>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" default="false" project-jdk-name="JavaSE-1.8" project-jdk-type="JavaSDK" />
 </project>
