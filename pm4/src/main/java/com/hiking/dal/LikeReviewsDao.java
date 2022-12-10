@@ -226,4 +226,50 @@ public class LikeReviewsDao {
 		}
 		return likeReviews;
 	}
+	
+	/*
+	 * new new new
+	 */
+	public List<LikeReviews> getLikeReviewsByReviewId(int reviewId) throws SQLException {
+		List<LikeReviews> likeReviews = new ArrayList<LikeReviews>();
+		String selectLikeReviews =
+			"SELECT likeReviewId,userId,reviewId " +
+			"FROM LikeReviews " +
+			"WHERE reviewId=?;";
+		Connection connection = null;
+		PreparedStatement selectStmt = null;
+		ResultSet results = null;
+		try {
+			connection = connectionManager.getConnection();
+			selectStmt = connection.prepareStatement(selectLikeReviews);
+			selectStmt.setInt(1, reviewId);
+			results = selectStmt.executeQuery();
+			UsersDao usersDao = UsersDao.getInstance();
+			ReviewsDao reviewsDao = ReviewsDao.getInstance();
+			while(results.next()) {
+				int likeReviewId = results.getInt("likeReviewId");
+				int userId = results.getInt("userId");
+				int resultReviewId = results.getInt("reviewId");
+
+				Users user = usersDao.getUserById(userId);
+				Reviews review = reviewsDao.getReviewById(resultReviewId);
+				LikeReviews likeReview = new LikeReviews(likeReviewId, user, review);
+				likeReviews.add(likeReview);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw e;
+		} finally {
+			if(connection != null) {
+				connection.close();
+			}
+			if(selectStmt != null) {
+				selectStmt.close();
+			}
+			if(results != null) {
+				results.close();
+			}
+		}
+		return likeReviews;
+	}
 }
