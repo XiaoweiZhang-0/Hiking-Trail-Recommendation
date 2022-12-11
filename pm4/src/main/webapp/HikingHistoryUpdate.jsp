@@ -25,6 +25,10 @@
     <input id="hikingHistoryId" name="hikingHistoryId" value="${fn:escapeXml(param.hikingHistoryId)}">
   </p>
   <p>
+    <label for="userId">UserId</label>
+    <input id="userId" name="userId" value="${fn:escapeXml(param.userId)}">
+  </p>
+  <p>
     <label for="trailId">New Trail ID</label>
     <input id="trailId" name="trailId" value="">
   </p>
@@ -65,8 +69,8 @@
   </p>
 </form>
 <br/><br/>
-	<p>
-		<span id="successMessage"><b>${messages.success}</b></span>
-	</p>
+<%--	<p>--%>
+<%--		<span id="successMessage"><b>${messages.success}</b></span>--%>
+<%--	</p>--%>
 </body>
 </html>
