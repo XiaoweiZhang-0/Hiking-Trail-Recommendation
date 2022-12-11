@@ -5,21 +5,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Delete a User</title>
+<title>Delete a Review</title>
 </head>
 <body>
 <%--	<h1>${messages.title}</h1>--%>
-	<form action="userdelete" method="post">
+	<form action="reviewdelete" method="post">
 		<p>
 			<div>
-				<label for="userId">UserId</label>
-				<input id="userId" name="userId" value="${fn:escapeXml(param.userid)}">
+				<label for="reviewId">reviewId</label>
+				<input id="reviewId" name="reviewId" value="${fn:escapeXml(param.reviewId)}">
 			</div>
 		</p>
 		<p>

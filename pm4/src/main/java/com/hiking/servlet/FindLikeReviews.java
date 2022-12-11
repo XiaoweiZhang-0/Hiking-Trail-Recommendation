@@ -72,6 +72,7 @@ public class FindLikeReviews extends HttpServlet {
         	try {
         		int reviewIdInt = Integer.parseInt(reviewId);
         		likeReviews = likeReviewsDao.getLikeReviewsByReviewId(reviewIdInt);
+        		System.out.print(likeReviews.size());
         	} catch (SQLException e) {
     			e.printStackTrace();
     			throw new IOException(e);
@@ -80,7 +81,7 @@ public class FindLikeReviews extends HttpServlet {
         	
         }
         
-        req.setAttribute("likeReview", likeReviews);
+        req.setAttribute("likeReviews", likeReviews);
         req.getRequestDispatcher("/FindLikeReviews.jsp").forward(req, resp);
 		
 	}
