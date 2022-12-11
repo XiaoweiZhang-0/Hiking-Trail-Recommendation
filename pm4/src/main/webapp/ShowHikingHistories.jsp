@@ -20,8 +20,10 @@
 <%--            <p>--%>
 <%--                <input type="text">--%>
 <%--            </p>--%>
+            <a href="hikinghistorycreate?userId=${fn:escapeXml(param.userId)}">Add New History</a>
             <tr>
-                <th>TrailID</th>
+                <th>Trail ID</th>
+                <th>Trail Name</th>
                 <th>Date</th>
 <%--                <th>Review</th>--%>
 <%--                <th>Recommended?</th>--%>
@@ -36,12 +38,13 @@
             <c:forEach items="${hikingHistories}" var="hikingHistory">
             <tr>
                     <td><c:out value="${hikingHistory.getHikingTrail().getTrailId()}"/></td>
+                    <td><c:out value="${hikingHistory.getHikingTrail().getTrailName()}"/></td>
                     <td><c:out value="${hikingHistory.getTravelTime()}"/></td>
-                    <td><a href=""/></td>
-                    <td><a href=""/></td>
+<%--                    <td><a href=""/></td>--%>
+<%--                    <td><a href=""/></td>--%>
 <%--                    <td><a href="reviews?reviewId=<c:out value="${hikingHistory.getUserId()}"/>">Delete</a></td>--%>
-<%--                    <td><a href="hikinghistoryupdate?hikingHistoryId=<c:out value="${hikingHistory.getHikingHistoryId()}"/>">Update</a></td>--%>
-<%--                    <td><a href="hikinghistorydelete?hikingHistoryId=<c:out value="${hikingHistory.getHikingHistoryId()}"/>">Delete</a></td>--%>
+                    <td><a href="hikinghistoryupdate?hikingHistoryId=<c:out value="${hikingHistory.getHikingHistoryId()}"/>&userId=${fn:escapeXml(param.userId)}">Update</a></td>
+                    <td><a href="hikinghistorydelete?hikingHistoryId=<c:out value="${hikingHistory.getHikingHistoryId()}"/>&userId=${fn:escapeXml(param.userId)}">Delete</a></td>
 <%--                    <td><c:out value="${}"</td>--%>
 <%--                    <td><a href="userdelete?userid=<c:out value="${user.getUserId()}"/>">Delete</a></td>--%>
             </tr>
@@ -54,6 +57,5 @@
 <%--                <th>Create new hiking history</th>--%>
 <%--            </tr>--%>
         </table>
-        <br><br><br><br><p>Create new Hiking History</p>
 </body>
 </html>

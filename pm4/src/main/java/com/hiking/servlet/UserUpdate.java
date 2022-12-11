@@ -34,20 +34,6 @@ public class UserUpdate extends HttpServlet {
 //
 //    // Retrieve user and validate.
     String userId = req.getParameter("userId");
-//    if (userName == null || userName.trim().isEmpty()) {
-//      messages.put("success", "Please enter a valid UserName.");
-//    } else {
-//      try {
-//        Users user = UsersDao.getBlogUserFromUserName(userName);
-//        if(blogUser == null) {
-//          messages.put("success", "UserName does not exist.");
-//        }
-//        req.setAttribute("blogUser", blogUser);
-//      } catch (SQLException e) {
-//        e.printStackTrace();
-//        throw new IOException(e);
-//      }
-//    }
 
     req.getRequestDispatcher("/UserUpdate.jsp").forward(req, resp);
   }

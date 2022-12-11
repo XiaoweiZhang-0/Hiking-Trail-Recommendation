@@ -25,13 +25,13 @@
     <input id="hikingHistoryId" name="hikingHistoryId" value="${fn:escapeXml(param.hikingHistoryId)}">
   </p>
   <p>
-    <label for="lastName">New LastName</label>
-    <input id="lastName" name="lastName" value="">
+    <label for="trailId">New Trail ID</label>
+    <input id="trailId" name="trailId" value="">
   </p>
-  <%--		<p>--%>
-  <%--			<label for="gender">New Gender</label>--%>
-  <%--			<input id="gender" name="gender" value="">--%>
-  <%--		</p>--%>
+  <p>
+    <label for="date">New Travel Date ( in the format "yyyy-mm-dd" )</label>
+    <input id="date" name="date" value="">
+  </p>
   <%--		<p>--%>
   <%--			<label for="age">New Age</label>--%>
   <%--			<input id="age" name="age" value="">--%>
