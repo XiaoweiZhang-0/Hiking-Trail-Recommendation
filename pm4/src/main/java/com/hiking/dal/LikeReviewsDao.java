@@ -272,4 +272,43 @@ public class LikeReviewsDao {
 		}
 		return likeReviews;
 	}
+
+	public int getLikeCountsByReviewId(int likeReviewId) throws SQLException {
+
+        String selectLikeReview =
+                "SELECT count(*) as n "
+                + "FROM LikeReviews "
+                + "WHERE reviewID=?;";
+        Connection connection = null;
+        PreparedStatement selectStmt = null;
+        ResultSet results = null;
+
+        try {
+            connection = connectionManager.getConnection();
+            selectStmt = connection.prepareStatement(selectLikeReview);
+            selectStmt.setInt(1, likeReviewId);
+            results = selectStmt.executeQuery();
+            if(results.next()) {
+                int count = results.getInt("n");
+                return count;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        } finally {
+            if(connection != null) {
+                connection.close();
+            }
+            if(selectStmt != null) {
+                selectStmt.close();
+            }
+            if(results != null) {
+                results.close();
+            }
+        }
+
+        return 0;
+
+    }
 }
