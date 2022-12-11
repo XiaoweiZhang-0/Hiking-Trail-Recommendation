@@ -19,7 +19,7 @@
 	<h1>Hello</h1>
 	<p>
 		<label for=reviewId>reviewId</label>
-		<input id="reviewId" name="reviewId" value="${fn:escapeXml(param.likeReviewId)}">
+		<input id="reviewId" name="reviewId" value="${fn:escapeXml(param.reviewId)}">
 	</p>
 	<p>
 		<input type="submit">

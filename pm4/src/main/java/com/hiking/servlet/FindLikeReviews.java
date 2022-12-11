@@ -72,6 +72,7 @@ public class FindLikeReviews extends HttpServlet {
         	try {
         		int reviewIdInt = Integer.parseInt(reviewId);
         		likeReviews = likeReviewsDao.getLikeReviewsByReviewId(reviewIdInt);
+        		System.out.print(likeReviews.size());
         	} catch (SQLException e) {
     			e.printStackTrace();
     			throw new IOException(e);
