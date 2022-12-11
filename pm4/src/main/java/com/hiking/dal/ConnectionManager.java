@@ -43,7 +43,7 @@ public class ConnectionManager {
 	// Port to your database server. By default, this is 3307.
 	private final int port= 3306;
 	// Name of the MySQL schema that contains your tables.
-	private final String schema = "mt2";//modify to corresponding schema
+	private final String schema = "Trail";//modify to corresponding schema
 	// Default timezone for MySQL server.
 	private final String timezone = "UTC";
 
