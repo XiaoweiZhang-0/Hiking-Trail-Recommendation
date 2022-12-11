@@ -21,8 +21,8 @@
 
 <div id="userCreate" class="mt-5 ml-5 text-left"><a href="usercreate">Create User</a></div>
 
-<div>
-    <div class="mt-5 m-5 text-left">
+<div class="w-75 mx-auto">
+    <div class="mt-5 text-left">
         <form action="findusers" method="post">
             <h5>Search for a User by UserId</h5>
             <p>
@@ -32,7 +32,6 @@
             <p>
                 <input type="submit">
                 <br/><br/><br/>
-                <%--			<span id="successMessage"><b>${messages.success}</b></span>--%>
             </p>
         </form>
     </div>
@@ -53,47 +52,15 @@
                 <th>Phone</th>
                 <th>Email</th>
 
-                <%--                <th>HikingHistories</th>--%>
-                <%--                <th>Reviews</th>--%>
-                <%--                <th>LikesReviews</th>--%>
-                <%--                <th>ReviewComments</th>--%>
-                <%--                <th>LikesComments</th>--%>
-
                 <th>HikingHistories</th>
-<%--                <th>Reviews</th>--%>
-<%--                <th>LikesReviews</th>--%>
-<%--                <th>ReviewComments</th>--%>
-<%--                <th>LikesComments</th>--%>
                 <th>Recommendations</th>
 
                 <th>Delete User</th>
                 <th>Update User</th>
             </tr>
-            <%--            <c:item="${user}" var="user" >--%>
-            <%--            <jsp:useBean id="users" scope="request" type="java.util.List"/>--%>
             <c:forEach items="${users}" var="user">
                 <%--            <c:item var="${user}" var="user">--%>
                 <tr>
-
-                    <td><c:out value="${user.getUserId()}"/></td>
-                    <td><c:out value="${user.getFirstName()}"/></td>
-                    <td><c:out value="${user.getLastName()}"/></td>
-                    <td><c:out value="${user.getPassword()}"/></td>
-                    <td><c:out value="${user.getGender()}"/></td>
-                    <td><c:out value="${user.getAge()}"/></td>
-                    <td><c:out value="${user.getWeight()}"/></td>
-                    <td><c:out value="${user.getHeight()}"/></td>
-                    <td><c:out value="${user.getHikingLevel()}"/></td>
-                    <td><c:out value="${user.getAddress()}"/></td>
-                    <td><c:out value="${user.getPhoneNumber()}"/></td>
-                    <td><c:out value="${user.getEmail()}"/></td>
-                        <%--                    <td><a href="userreviews?userid=<c:out value="${User.getUserId()}"/>">Reviews</a></td>--%>
-                        <%--                    <td><a href="likesreviews?userid=<c:out value="${User.getUserId()}"/>">LikesReviews</a></td>--%>
-                        <%--                    <td><a href="reviewcomments?userid=<c:out value="${User.getUserId()}"/>">ReviewComments</a></td>--%>
-                        <%--                    <td><a href="likescomments?userid=<c:out value="${User.getUserId()}"/>">LikesComments</a></td>--%>
-                    <td><a href="userdelete?userid=<c:out value="${user.getUserId()}"/>">Delete</a></td>
-                    <td><a href="userupdate?userid=<c:out value="${user.getUserId()}"/>">Update</a></td>
-
                     <td><c:out value="${user.getUserId()}" /></td>
                     <td><c:out value="${user.getFirstName()}" /></td>
                     <td><c:out value="${user.getLastName()}" /></td>
@@ -107,10 +74,6 @@
                     <td><c:out value="${user.getPhoneNumber()}" /></td>
                     <td><c:out value="${user.getEmail()}" /></td>
                     <td><a href="showhikinghistories?userId=<c:out value="${user.getUserId()}"/>">Show Hiking Histories</a></td>
-<%--                    <td><a href="userreviews?userid=<c:out value="${User.getUserId()}"/>">Reviews</a></td>--%>
-<%--                    <td><a href="likesreviews?userid=<c:out value="${User.getUserId()}"/>">LikesReviews</a></td>--%>
-<%--                    <td><a href="reviewcomments?userid=<c:out value="${User.getUserId()}"/>">ReviewComments</a></td>--%>
-<%--                    <td><a href="likescomments?userid=<c:out value="${User.getUserId()}"/>">LikesComments</a></td>--%>
                     <td><a href="userrecommendations?userId=<c:out value="${user.getUserId()}"/>">Recommendations</a></td>
                     <td><a href="userdelete?userId=<c:out value="${user.getUserId()}"/>">Delete</a></td>
                     <td><a href="userupdate?userId=<c:out value="${user.getUserId()}"/>">Update</a></td>
