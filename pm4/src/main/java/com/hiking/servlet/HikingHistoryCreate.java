@@ -29,7 +29,8 @@ public class HikingHistoryCreate extends HttpServlet {
 //    usersDao = UsersDao.getInstance();
     hikingHistoriesDao = HikingHistoriesDao.getInstance();
     usersDao = UsersDao.getInstance();
-    hikingHistoriesDao = HikingHistoriesDao.getInstance();
+//    hikingHistoriesDao = HikingHistoriesDao.getInstance();
+    hikingTrailsDao = HikingTrailsDao.getInstance();
   }
 
   @Override

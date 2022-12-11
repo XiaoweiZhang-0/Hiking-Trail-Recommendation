@@ -12,6 +12,7 @@
 </head>
 <body>
 	<h1>${messages.title}</h1>
+    <div id="recommendationcreate"><a href="recommendationcreate">Create Recommendation</a></div>
         <table border="1">
             <tr>
                 <th>RecommendationId</th>

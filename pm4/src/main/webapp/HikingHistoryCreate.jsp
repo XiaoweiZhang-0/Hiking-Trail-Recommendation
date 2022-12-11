@@ -20,10 +20,10 @@
 <body>
 <h1>Add Hiking History</h1>
 <form action="hikinghistorycreate" method="post">
-  <%--		<p>--%>
-  <%--			<label for="userid">UserId</label>--%>
-  <%--			<input id="userid" name="userid" value="">--%>
-  <%--		</p>--%>
+  		<p>
+  			<label for="userId">UserId</label>
+  			<input id="userId" name="userId" value="${fn:escapeXml(param.userId)}">
+  		</p>
 <%--  <p>--%>
 <%--    <label for="">FirstName</label>--%>
 <%--    <input id="firstName" name="firstName" value="">--%>
