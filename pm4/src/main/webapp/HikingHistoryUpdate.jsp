@@ -19,15 +19,15 @@
 </head>
 <body>
 <h1>Update Hiking History</h1>
-<form action="hikinghistoryupdates" method="post">
+<form action="hikinghistoryupdate" method="post">
   <p>
     <label for="hikingHistoryId">Hiking History Id</label>
     <input id="hikingHistoryId" name="hikingHistoryId" value="${fn:escapeXml(param.hikingHistoryId)}">
   </p>
-<%--  <p>--%>
-<%--    <label for="userId">UserId</label>--%>
-<%--    <input id="userId" name="userId" value="${fn:escapeXml(param.userid)}">--%>
-<%--  </p>--%>
+  <p>
+    <label for="userId">UserId</label>
+    <input id="userId" name="userId" value="${fn:escapeXml(param.userId)}">
+  </p>
   <p>
     <label for="trailId">New Trail ID</label>
     <input id="trailId" name="trailId" value="">

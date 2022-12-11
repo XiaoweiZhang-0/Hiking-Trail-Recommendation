@@ -82,7 +82,6 @@ public class HikingHistoryCreate extends HttpServlet {
       throw new IOException("Wrong new travel date formatting");
       }
       Date time = Date.valueOf(travelTime);
-
       HikingHistories hist = new HikingHistories(user, trail, time);
       try {
         hikingHistoriesDao.create(hist);

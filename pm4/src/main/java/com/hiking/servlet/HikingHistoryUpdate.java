@@ -50,7 +50,7 @@ public class HikingHistoryUpdate extends HttpServlet {
 
     }
     String userId = req.getParameter("userId");
-    req.setAttribute("userId", userId);
+//    req.setAttribute("userId", userId);
     resp.sendRedirect("showhikinghistories?userId="+userId);
 //    req.getRequestDispatcher("showhikinghistories").forward(req, resp);
   }
