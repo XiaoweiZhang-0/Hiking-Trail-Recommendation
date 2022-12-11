@@ -41,6 +41,7 @@
                 <th>surface</th>
                 <th>canBicycle</th>
                 <th>canCarDrive</th>
+                <th>Recommendation</th>
             </tr>
 
              <c:forEach items="${hikingTrails}" var="hikingTrail">
@@ -54,6 +55,7 @@
                     <td><c:out value="${hikingTrail.getSurface()}" /></td>
                     <td><c:out value="${hikingTrail.isCanBicycle()}" /></td>
                     <td><c:out value="${hikingTrail.isCanCarDrive()}" /></td>
+                    <td><a href="hikingTrailrecommendations?trailId=<c:out value="${hikingTrail.getTrailId()}"/>">Recommendation</a></td>
                 </tr>
             </c:forEach>
        </table>

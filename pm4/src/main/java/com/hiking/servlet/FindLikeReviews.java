@@ -80,7 +80,7 @@ public class FindLikeReviews extends HttpServlet {
         	
         }
         
-        req.setAttribute("likeReview", likeReviews);
+        req.setAttribute("likeReviews", likeReviews);
         req.getRequestDispatcher("/FindLikeReviews.jsp").forward(req, resp);
 		
 	}

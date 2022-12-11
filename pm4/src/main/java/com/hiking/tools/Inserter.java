@@ -73,70 +73,70 @@ public class Inserter {
 				u1.getUserId(), u1.getFirstName(), u1.getLastName(), u1.getPassword(), u1.getGender(), u1.getAge(), 
 				u1.getWeight(), u1.getHeight(), u1.getHikingLevel(), u1.getAddress(), u1.getPhoneNumber(), u1.getEmail());
 		
-		HikingTrails ht = hikingTrailsDao.getHikingTrailById(1);
-		System.out.format("Reading User: trailId:%s trailName:%s county:%s length:%s trailSystem:%s "
-				+ "surface:%s canBicycle:%s canCarDrive:%s \n",
-				ht.getTrailId(), ht.getTrailName(), ht.getCounty(), ht.getLength(), ht.getTrailSystem(), 
-				ht.getSurface(), ht.isCanBicycle(), ht.isCanCarDrive());
-		
-		Reviews rev = reviewsDao.getReviewById(1);
-		System.out.format("Reading User: reviewId:%s userId:%s trailId:%s createTime:%s review:%s rating:%s \n",
-				rev.getReviewId(), rev.getUser().getUserId(), rev.getHikingTrail().getTrailId(), rev.getCreatedTime(), 
-				rev.getReview(), rev.getRating());
-		
-		Comments com = commentsDao.getCommentById(1);
-		System.out.format("Reading User: commentId:%s userId:%s reviewId:%s comment:%s \n", 
-				com.getCommentId(), com.getUser().getUserId(), com.getReview().getReviewId(), com.getComment());
-		Recommendations recom = recommendationsDao.getRecommendationById(1);
-		System.out.format("Reading User: recommendationId:%s userId:%s trailId:%s \n", 
-				recom.getRecommendationId(), recom.getUser().getUserId(), recom.getHikingTrail().getTrailId());
-		
-		HikingHistories hkhis = hikingHistoriesDao.getHikingHistoryById(1);
-		System.out.format("Reading User: hikingHistoryId:%s userId:%s trailId:%s travelTime:%s \n", 
-				hkhis.getHikingHistoryId(), hkhis.getUser().getUserId(), hkhis.getHikingTrail().getTrailId(), hkhis.getTravelTime());
-		
-		LikeReviews lr = likeReviewsDao.getLikeReviewsById(1);
-		System.out.format("Reading User: likeReviewId:%s userId:%s reviewId:%s \n", 
-				lr.getLikeReviewId(), lr.getUser().getUserId(), lr.getReview().getReviewId());
-		
-		LikeComments lc = likeCommentsDao.getLikeCommentById(1);
-		System.out.format("Reading User: likeCommentId:%s userId:%s commentId:%s \n", 
-				lc.getLikeCommentId(), lc.getUser().getUserId(), lc.getComment().getCommentId());
-		
-		List<Friendships> fList1 = friendshipsDao.getFriendshipsByUserId(1);
-		for(Friendships f : fList1) {
-			System.out.format("Looping Friendships: userId1:%s userId2:%s \n", 
-					f.getUser1().getUserId(), f.getUser2().getUserId());
-		}
-		
-		List<Comments> commlist = commentsDao.getCommentsByUserId(1);
-		List<Recommendations> recomlist = recommendationsDao.getRecommendationsByUserId(1);
-		List<Reviews> revlist = reviewsDao.getReviewsByUserId(1);
-		List<LikeComments> lclist = likeCommentsDao.getLikeCommentsByUserId(1);
-		List<LikeReviews> lrlist = likeReviewsDao.getLikeReviewsByUserId(1);
-		
-		
-		//UPDATE
-		user1 = usersDao.updateLastName(user1, "zhao");
-		hikingTrails1 = hikingTrailsDao.updateTrailtName(hikingTrails1, "Rattlesnake Trail");
-		review = reviewsDao.updateReview(review, "Good trail here. ");
-		comment1 = commentsDao.updateReviewId(comment1, review2.getReviewId());
-		recommendation1 = recommendationsDao.updateTrailId(recommendation1, hikingTrails2.getTrailId());
-		hikingHistory = hikingHistoriesDao.updateHikingHistory(hikingHistory, hikingTrails2.getTrailId(), date2);
-		likeReviews = likeReviewsDao.updateReviewId(likeReviews, review2.getReviewId());
-		likeComment = likeCommentsDao.updateCommentId(likeComment, comment2.getCommentId());
-		friendship = friendshipsDao.updateUserId2(friendship, user3.getUserId());
-		
-		//DELETE
-		user1 = usersDao.delete(user1);
-		hikingTrails1 = hikingTrailsDao.delete(hikingTrails1);
-		review = reviewsDao.delete(review);
-		comment1 = commentsDao.delete(comment1);
-		recommendation1 = recommendationsDao.delete(recommendation1);
-		hikingHistory = hikingHistoriesDao.delete(hikingHistory);
-		likeReviews = likeReviewsDao.delete(likeReviews);
-		likeComment = likeCommentsDao.delete(likeComment);
-		friendship = friendshipsDao.delete(friendship);
+//		HikingTrails ht = hikingTrailsDao.getHikingTrailById(1);
+//		System.out.format("Reading User: trailId:%s trailName:%s county:%s length:%s trailSystem:%s "
+//				+ "surface:%s canBicycle:%s canCarDrive:%s \n",
+//				ht.getTrailId(), ht.getTrailName(), ht.getCounty(), ht.getLength(), ht.getTrailSystem(), 
+//				ht.getSurface(), ht.isCanBicycle(), ht.isCanCarDrive());
+//		
+//		Reviews rev = reviewsDao.getReviewById(1);
+//		System.out.format("Reading User: reviewId:%s userId:%s trailId:%s createTime:%s review:%s rating:%s \n",
+//				rev.getReviewId(), rev.getUser().getUserId(), rev.getHikingTrail().getTrailId(), rev.getCreatedTime(), 
+//				rev.getReview(), rev.getRating());
+//		
+//		Comments com = commentsDao.getCommentById(1);
+//		System.out.format("Reading User: commentId:%s userId:%s reviewId:%s comment:%s \n", 
+//				com.getCommentId(), com.getUser().getUserId(), com.getReview().getReviewId(), com.getComment());
+//		Recommendations recom = recommendationsDao.getRecommendationById(1);
+//		System.out.format("Reading User: recommendationId:%s userId:%s trailId:%s \n", 
+//				recom.getRecommendationId(), recom.getUser().getUserId(), recom.getHikingTrail().getTrailId());
+//		
+//		HikingHistories hkhis = hikingHistoriesDao.getHikingHistoryById(1);
+//		System.out.format("Reading User: hikingHistoryId:%s userId:%s trailId:%s travelTime:%s \n", 
+//				hkhis.getHikingHistoryId(), hkhis.getUser().getUserId(), hkhis.getHikingTrail().getTrailId(), hkhis.getTravelTime());
+//		
+//		LikeReviews lr = likeReviewsDao.getLikeReviewsById(1);
+//		System.out.format("Reading User: likeReviewId:%s userId:%s reviewId:%s \n", 
+//				lr.getLikeReviewId(), lr.getUser().getUserId(), lr.getReview().getReviewId());
+//		
+//		LikeComments lc = likeCommentsDao.getLikeCommentById(1);
+//		System.out.format("Reading User: likeCommentId:%s userId:%s commentId:%s \n", 
+//				lc.getLikeCommentId(), lc.getUser().getUserId(), lc.getComment().getCommentId());
+//		
+//		List<Friendships> fList1 = friendshipsDao.getFriendshipsByUserId(1);
+//		for(Friendships f : fList1) {
+//			System.out.format("Looping Friendships: userId1:%s userId2:%s \n", 
+//					f.getUser1().getUserId(), f.getUser2().getUserId());
+//		}
+//		
+//		List<Comments> commlist = commentsDao.getCommentsByUserId(1);
+//		List<Recommendations> recomlist = recommendationsDao.getRecommendationsByUserId(1);
+//		List<Reviews> revlist = reviewsDao.getReviewsByUserId(1);
+//		List<LikeComments> lclist = likeCommentsDao.getLikeCommentsByUserId(1);
+//		List<LikeReviews> lrlist = likeReviewsDao.getLikeReviewsByUserId(1);
+//		
+//		
+//		//UPDATE
+//		user1 = usersDao.updateLastName(user1, "zhao");
+//		hikingTrails1 = hikingTrailsDao.updateTrailtName(hikingTrails1, "Rattlesnake Trail");
+//		review = reviewsDao.updateReview(review, "Good trail here. ");
+//		comment1 = commentsDao.updateReviewId(comment1, review2.getReviewId());
+//		recommendation1 = recommendationsDao.updateTrailId(recommendation1, hikingTrails2.getTrailId());
+//		hikingHistory = hikingHistoriesDao.updateHikingHistory(hikingHistory, hikingTrails2.getTrailId(), date2);
+//		likeReviews = likeReviewsDao.updateReviewId(likeReviews, review2.getReviewId());
+//		likeComment = likeCommentsDao.updateCommentId(likeComment, comment2.getCommentId());
+//		friendship = friendshipsDao.updateUserId2(friendship, user3.getUserId());
+//		
+//		//DELETE
+//		user1 = usersDao.delete(user1);
+//		hikingTrails1 = hikingTrailsDao.delete(hikingTrails1);
+//		review = reviewsDao.delete(review);
+//		comment1 = commentsDao.delete(comment1);
+//		recommendation1 = recommendationsDao.delete(recommendation1);
+//		hikingHistory = hikingHistoriesDao.delete(hikingHistory);
+//		likeReviews = likeReviewsDao.delete(likeReviews);
+//		likeComment = likeCommentsDao.delete(likeComment);
+//		friendship = friendshipsDao.delete(friendship);
 	
 	}
 

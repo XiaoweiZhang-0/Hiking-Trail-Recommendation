@@ -44,8 +44,8 @@
 <%--                    <td><a href="recommendationuser?recommendationId=<c:out value="${recommendation.getRecommendationId()}"/>">Users</a></td>
                     <td><a href="recommendationhikingtrail?recommendationId=<c:out value="${recommendation.getRecommendationId()}"/>">HikingTrails</a></td>
 --%>
-                    <td><a href="recommendationdelete?recommendationid=<c:out value="${recommendation.getRecommendationId()}"/>">Delete</a></td>
-                    <td><a href="recommendationupdate?recommendationid=<c:out value="${recommendation.getRecommendationId()}"/>">Update</a></td>
+                    <td><a href="recommendationdelete?recommendationId=<c:out value="${recommendation.getRecommendationId()}"/>">Delete</a></td>
+                    <td><a href="recommendationupdate?recommendationId=<c:out value="${recommendation.getRecommendationId()}"/>">Update</a></td>
                 </tr>
             </c:forEach>
        </table>
