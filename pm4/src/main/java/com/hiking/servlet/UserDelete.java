@@ -33,6 +33,7 @@ public class UserDelete extends HttpServlet {
     req.setAttribute("messages", messages);
     // Provide a title and render the JSP.
     messages.put("title", "Delete BlogUser");
+//    System.out.println(userId);
     req.getRequestDispatcher("/UserDelete.jsp").forward(req, resp);
   }
 
