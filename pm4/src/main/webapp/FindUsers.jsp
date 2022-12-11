@@ -21,7 +21,7 @@
 <h1>Matching Users</h1>
 
 <div id="userCreate" class="mt-5 ml-5 text-left">
-    <button href="usercreate" type="button" class="btn btn-light">Create User</button>
+    <a href="usercreate" type="button" class="btn btn-light">Create User</a>
 </div>
 
 <div class="w-75 mx-auto">

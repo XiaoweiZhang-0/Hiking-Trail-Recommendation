@@ -1,3 +1,8 @@
-td{
-    padding: 1em;
+td {
+    padding: 2em;
+}
+
+label {
+    padding-left: 2em;
+    padding-right: 2em;
 }
