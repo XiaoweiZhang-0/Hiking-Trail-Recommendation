@@ -36,7 +36,7 @@
 			</tr>
 			<c:forEach items="${likeReviews}" var="likeReview">
 				<tr>
-					<td><c:out value="${likeReview.getUser().getUserId()}" /></td>
+					<td><c:out value="${likeReview.getUser().getFirstName()}" /></td>
 				</tr>
 			</c:forEach>
 		</table>

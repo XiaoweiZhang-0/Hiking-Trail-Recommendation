@@ -24,7 +24,7 @@
                     <td><c:out value="${recommendation.getRecommendationId()}" /></td>
                     <td><c:out value="${recommendation.getUser().getUserId()}" /></td>
                     <td><c:out value="${recommendation.getHikingTrail().getTrailId()}" /></td>
-                    <td><a href="recommendationdelete?recommendationid=<c:out value="${recommendation.getRecommendationId()}"/>">Delete</a></td>
+                    <td><a href="recommendationdelete?recommendationId=<c:out value="${recommendation.getRecommendationId()}"/>">Delete</a></td>
                 </tr>
             </c:forEach>
        </table>
