@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css" />
 
 <html>
 
@@ -19,7 +20,9 @@
 
 <h1>Matching Users</h1>
 
-<div id="userCreate" class="mt-5 ml-5 text-left"><a href="usercreate">Create User</a></div>
+<div id="userCreate" class="mt-5 ml-5 text-left">
+    <a href="usercreate" class="text-black-50">Create User</a>
+</div>
 
 <div class="w-75 mx-auto">
     <div class="mt-5 text-left">
@@ -37,7 +40,7 @@
     </div>
 
     <div>
-        <table border="1" class="m-auto">
+        <table class="m-auto table-secondary table-responsive text-secondary">
             <tr>
                 <th>UserId</th>
                 <th>FirstName</th>
@@ -77,7 +80,6 @@
                     <td><a href="userrecommendations?userId=<c:out value="${user.getUserId()}"/>">Recommendations</a></td>
                     <td><a href="userdelete?userId=<c:out value="${user.getUserId()}"/>">Delete</a></td>
                     <td><a href="userupdate?userId=<c:out value="${user.getUserId()}"/>">Update</a></td>
-
                 </tr>
             </c:forEach>
         </table>
