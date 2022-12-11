@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/pm4/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" filepath="$PROJECT_DIR$/pm4/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Hiking-Trail-Recommendation.iml" filepath="$PROJECT_DIR$/.idea/Hiking-Trail-Recommendation.iml" />
       <module fileurl="file://$PROJECT_DIR$/pm4/pm4.iml" filepath="$PROJECT_DIR$/pm4/pm4.iml" />
     </modules>
