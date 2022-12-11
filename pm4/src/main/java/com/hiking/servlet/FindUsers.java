@@ -78,7 +78,7 @@ public class FindUsers extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)
             throws ServletException, IOException {
-        List<Users> users = new ArrayList<Users>();
+        List<Users> users = new ArrayList<>();
         // Map for storing messages.
         String userId = httpServletRequest.getParameter("userId");
         int userIdInt = 0;
