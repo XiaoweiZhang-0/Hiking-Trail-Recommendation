@@ -1,5 +1,7 @@
 package com.hiking.model;
 
+import java.util.List;
+
 public class Users {
 	protected int userId;
 	protected String firstName;
@@ -13,6 +15,7 @@ public class Users {
 	protected String address;
 	protected String phoneNumber;
 	protected String email;
+
 
 	public enum Gender {
 		Male, Female, NotSpecified, NonBinary

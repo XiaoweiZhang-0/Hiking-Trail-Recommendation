@@ -42,11 +42,12 @@
                 <th>Address</th>
                 <th>Phone</th>
                 <th>Email</th>
-<%--                <th>HikingHistories</th>--%>
+                <th>HikingHistories</th>
 <%--                <th>Reviews</th>--%>
 <%--                <th>LikesReviews</th>--%>
 <%--                <th>ReviewComments</th>--%>
 <%--                <th>LikesComments</th>--%>
+                <th>Recommendations</th>
                 <th>Delete User</th>
                 <th>Update User</th>
             </tr>
@@ -67,12 +68,14 @@
                     <td><c:out value="${user.getAddress()}" /></td>
                     <td><c:out value="${user.getPhoneNumber()}" /></td>
                     <td><c:out value="${user.getEmail()}" /></td>
+                    <td><a href="showhikinghistories?userId=<c:out value="${user.getUserId()}"/>">Show Hiking Histories</a></td>
 <%--                    <td><a href="userreviews?userid=<c:out value="${User.getUserId()}"/>">Reviews</a></td>--%>
 <%--                    <td><a href="likesreviews?userid=<c:out value="${User.getUserId()}"/>">LikesReviews</a></td>--%>
 <%--                    <td><a href="reviewcomments?userid=<c:out value="${User.getUserId()}"/>">ReviewComments</a></td>--%>
 <%--                    <td><a href="likescomments?userid=<c:out value="${User.getUserId()}"/>">LikesComments</a></td>--%>
-                    <td><a href="userdelete?userid=<c:out value="${user.getUserId()}"/>">Delete</a></td>
-                    <td><a href="userupdate?userid=<c:out value="${user.getUserId()}"/>">Update</a></td>
+                    <td><a href="userrecommendations?userId=<c:out value="${User.getUserId()}"/>">Recommendations</a></td>
+                    <td><a href="userdelete?userId=<c:out value="${user.getUserId()}"/>">Delete</a></td>
+                    <td><a href="userupdate?userId=<c:out value="${user.getUserId()}"/>">Update</a></td>
                 </tr>
             </c:forEach>
        </table>
