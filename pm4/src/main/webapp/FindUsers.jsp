@@ -78,7 +78,7 @@
                     <td><c:out value="${user.getEmail()}"/></td>
 
                     <td><a href="showhikinghistories?userId=<c:out value="${user.getUserId()}"/>">Show Hiking Histories</a></td>
-                    <td><a href="reviews?userId=<c:out value="${User.getUserId()}"/>">Reviews</a></td>
+                    <td><a href="reviews?userId=<c:out value="${user.getUserId()}"/>">Reviews</a></td>
                     <td><a href="userrecommendations?userId=<c:out value="${user.getUserId()}"/>">Recommendations</a></td>
                     <td><a href="userdelete?userId=<c:out value="${user.getUserId()}"/>">Delete</a></td>
                     <td><a href="userupdate?userId=<c:out value="${user.getUserId()}"/>">Update</a></td>

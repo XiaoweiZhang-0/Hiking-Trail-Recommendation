@@ -59,7 +59,7 @@ public class ReviewCreate extends HttpServlet {
     }
     double ratingDouble = 0;
     if (rating != null) {
-        ratingDouble = Double.parseDouble(trailId);
+        ratingDouble = Double.parseDouble(rating);
     }
     
     UsersDao usersDao = UsersDao.getInstance();
